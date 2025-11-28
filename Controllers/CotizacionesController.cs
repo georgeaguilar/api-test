@@ -18,6 +18,13 @@ public class CotizacionesController : ControllerBase
         _db = db;
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var cotizaciones = await _repo.GetAllAsync();
+        return Ok(cotizaciones);
+    }
+
     [HttpGet("{id:int}")]
     public async Task<IActionResult> Get(int id)
     {
@@ -74,6 +81,7 @@ public class CotizacionesController : ControllerBase
               <li>Prima Neta: {Math.Round(created.SumaAsegurada * (created.Tasa / 100m), 2)}</li>
             </ul>
         ";
+        Console.WriteLine(cliente.CorreoElectronico);
         try
         {
             await _emailService.SendCotizacionEmailAsync(cliente.CorreoElectronico, subject, body);

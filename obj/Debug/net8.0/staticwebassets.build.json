@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VxCYWhMUBfJ/r+Z2TSUbbyCHFBqZiLjZcl1MOeYTiSw=",
+  "Source": "api-test",
+  "BasePath": "_content/api-test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

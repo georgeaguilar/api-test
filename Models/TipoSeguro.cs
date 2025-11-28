@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Seguros.API.Models
 {
     public class TipoSeguro
@@ -6,6 +8,7 @@ namespace Seguros.API.Models
         public string Nombre { get; set; } = null!;
         public string? Descripcion { get; set; }
 
+        [JsonIgnore]
         public ICollection<Cotizacion>? Cotizaciones { get; set; }
     }
 }

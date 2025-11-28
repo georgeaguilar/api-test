@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Seguros.API.Models
 {
@@ -22,6 +23,8 @@ namespace Seguros.API.Models
 
         [Required]
         public string CorreoElectronico { get; set; } = null!;
+
+        [JsonIgnore]
 
         public ICollection<Cotizacion>? Cotizaciones { get; set; }
     }
